@@ -46,10 +46,10 @@ header p {
 
 main {
     padding: 0 10%;
-    margin: 5% 0;
+    margin-top: 5%;
     display: grid;
     grid-template-columns: repeat(13, 1fr);
-    grid-template-rows: 1fr 4fr 1fr;
+    grid-template-rows: 65px 4fr ;
     position: relative;
 }
 main img{ 
@@ -59,7 +59,6 @@ main .title{
     font-family: 'Ms Madi', cursive;
     font-size: 4rem;
     margin: 0 20px;
-    margin-bottom: 50px;
     color: white;
     justify-self: center;
     letter-spacing: 1px;
@@ -98,6 +97,9 @@ box-shadow:  -8px -8px 12px #4956b0,
     grid-row: 2/3
 }
 main form{
+    min-width: 300px;
+    max-width: 400px;
+    min-height: 400px;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 2fr 1fr 2fr 1fr;
@@ -144,14 +146,19 @@ main .triangulo button{
     grid-column: 1/10;
     grid-row: 5/6;
 }
-button{
+button {
+    text-decoration: none;
     grid-row: 5/6;
     grid-column: 1/2;
     border: none;
     background-color: transparent;
-    color: #ffffff;
+    
     text-shadow: -2px 2px 4px #373561,
     2px -2px 4px ;
+}
+button a{
+    text-decoration: none;
+    color: #ffffff;
 }
 main button:hover {
     transform: scale(1.05);
@@ -251,12 +258,90 @@ input::-webkit-inner-spin-button {
     /* display: none; <- Crashes Chrome on hover */
     -webkit-appearance: none;
     margin: 0;}
-
 footer {
-    bottom: 2px;
-    width: 100%;
-    height: 20px;
-    color: white;
-    font-size: 1.2rem;
-    z-index: 4;
+    display: grid;
+    width: 100vw;
+    grid-template-columns: 1fr 10fr 1fr;
+    height: 100px;;
+    
 }
+footer p {
+    flex-direction: center;
+    grid-column: 2;
+    place-self: center;
+    color: white;
+    font-size: 1.5rem;
+    z-index: 4;
+    text-shadow: -2px 2px 4px #373561,
+    2px -2px 4px ;
+}
+
+.modalDialog {
+	position: fixed;
+	font-family: Arial, Helvetica, sans-serif;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(84, 11, 109, 0.618);
+	z-index: 99999;
+	opacity:0;
+	-webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in;
+	transition: opacity 400ms ease-in;
+	pointer-events: none;
+}
+.modalDialog:target {
+	opacity:1;
+	pointer-events: auto;
+}
+.modalDialog > div {
+	width: 400px;
+	position: relative;
+	margin:15% auto;
+	padding: 5px 20px 13px 20px;
+	border-radius: 10px;
+	background: #fff;
+	background: -moz-linear-gradient(#fff, #999);
+	background: -webkit-linear-gradient(#fff, #999);
+	background: -o-linear-gradient(#fff, #999);
+  -webkit-transition: opacity 400ms ease-in;
+-moz-transition: opacity 400ms ease-in;
+transition: opacity 400ms ease-in;
+}
+.modalDialog div h2{
+    font-size: 3rem;
+    margin: 15px;
+    text-align: center;
+}
+.modalDialog div p {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 15px;
+}
+#ResultP{
+    font-size: 3rem;
+    align-self: center;
+    font-weight: bolder;
+    text-align: center;
+    margin: 50px auto;
+}
+.close {
+	background: #606061;
+	color: #FFFFFF;
+	line-height: 25px;
+	position: absolute;
+	right: -12px;
+	text-align: center;
+	top: -10px;
+	width: 24px;
+	text-decoration: none;
+	font-weight: bold;
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+	border-radius: 12px;
+	-moz-box-shadow: 1px 1px 3px #000;
+	-webkit-box-shadow: 1px 1px 3px #000;
+	box-shadow: 1px 1px 3px #000;
+}
+.close:hover { background: #00d9ff; }

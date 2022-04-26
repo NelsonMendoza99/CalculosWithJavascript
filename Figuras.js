@@ -51,7 +51,8 @@ function calcularPerimetroCuadrado(){
     const value = input.value;
 
     const perimetro = perimetroCuadrado(value)
-    alert(perimetro);
+    const resultP= document.getElementById("ResultP")
+    resultP.innerText =perimetro;
 
 }
 
@@ -60,7 +61,8 @@ function calcularAreaCuadrado(){
     const value = input.value
 
     const area = areaCuadrado(value)
-    alert(area);
+    const resultP= document.getElementById("ResultP")
+    resultP.innerText =area;
 }
 
 //triangulo
@@ -74,7 +76,8 @@ function calcularPerimetroTriangulo(){
     const base = input3.value;
     
     const perimetro = perimetroTriangulo(lado1, lado2, base)
-    alert(perimetro);
+    const resultP= document.getElementById("ResultP")
+    resultP.innerText =perimetro;
 
 }
 
@@ -85,7 +88,8 @@ function calcularAreaTriangulo(){
     const altura = input4.value;
     
     const area = areaTriangulo(base, altura)
-    alert(area);
+    const resultP= document.getElementById("ResultP")
+    resultP.innerText =area;
 }
 
 //circulo
@@ -94,7 +98,8 @@ function calcularPerimetroCirculo(){
     const radio = input.value;
     
     const perimetro = perimetroCirculo(radio)
-    alert(perimetro);
+    const resultP= document.getElementById("ResultP")
+    resultP.innerText =perimetro;
 
 }
 
@@ -103,5 +108,6 @@ function calcularAreaCirculo(){
     const radio = input.value;
     
     const area = areaCirculo(radio)
-    alert(area);
+    const resultP= document.getElementById("ResultP")
+    resultP.innerText =area;
 }
